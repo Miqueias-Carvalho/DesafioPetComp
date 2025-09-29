@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*
+
+#001249, #001747, #0D6EFD, #01204C, #3AA3FC
+
+*/
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #01204C;
+    box-shadow: 2px 2px 3px  #011633bc;
+
+}
+
+div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+div h1{
+    text-shadow: 1px 1px 5px #000000;
+}
+#Logo{
+    width: 45px;
+    height: 45px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin: 5px 0px 0px 20px;
+    
+}
+
+header nav > a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px;
+    margin-right: 40px;
+    font-size: 1.3em;
+    transition: 0.8s;
+    font-weight: bold;
+}
+
+header nav > a:hover{
+    transform: scale(1.1);
+    background-color: #02367f9f;
+    border-radius: 8px;
+    
+}
