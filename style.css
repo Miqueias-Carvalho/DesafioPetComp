@@ -4,36 +4,42 @@
     margin: 0;
     padding: 0;
 }
-/*
 
-#001249, #001747, #0D6EFD, #01204C, #3AA3FC
+:root{
+    --cor1: #07094B;
+    --cor2: #181899;
+    --cor3: #C99E4B;
+    --cor4: #E1BE7A;
+    --cor5: #FFFFE2;
+}
 
-*/
+html{
+    scroll-behavior: smooth;
+}
 
 header{
     height: 100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #FFFFFF;
-    background-color: #01204C;
-    box-shadow: 2px 2px 3px  #011633bc;
-
+    background-color: #040335;
 }
 
-div{
+header div{
     display: flex;
     align-items: center;
-    gap: 15px;
 }
-div h1{
+
+ header div h1{
+    font-size: 2.4em;
     text-shadow: 1px 1px 5px #000000;
 }
+
 #Logo{
-    width: 45px;
-    height: 45px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
+    width: 200px;
+    height: 100px;
     margin: 5px 0px 0px 20px;
     
 }
@@ -43,14 +49,114 @@ header nav > a{
     text-decoration: none;
     padding: 15px;
     margin-right: 40px;
-    font-size: 1.3em;
+    font-size: 1.4em;
     transition: 0.8s;
     font-weight: bold;
 }
 
 header nav > a:hover{
-    transform: scale(1.1);
-    background-color: #02367f9f;
-    border-radius: 8px;
+    background-color: #07056e;
+    border-radius: 8px; 
+}
+
+
+.Apresentacao{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    box-shadow: 2px 2px 5px #00000097;
+}
+
+
+.Apresentacao > div > img{
+    height: 500px;
+}
+
+
+
+#participantes{
+    padding-left: 45px;
+    text-align: center;
+    align-content: center;
+    background-color: #06094A;
+    height: 500px;
+    width: 100%;
+}
+
+#participantes > h2{
+    margin-bottom: 30px;
+    font-size: 2.3em;
+    background: linear-gradient(to right, var(--cor3), var(--cor4), var(--cor5));
+    background-clip: text;
+    color: transparent;
+}
+
+#participantes > p{
+    line-height: 1.5em;
+    font-size: 1.4em;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 4px var(--cor4);
+}
+
+
+
+#calendario{
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    background-color: #181899;
+    height: 500px;
+
+}
+
+#Data{
+    font-size: 3.5em;
+    font-weight: bold;
+    background: linear-gradient(to left, var(--cor3), var(--cor4), var(--cor5));
+    background-clip: text;
+    color: transparent;
+}
+
+#Mes{
+    font-size: 3.8em;
+    color: var(--cor3);
+}
+
+#Local{
+    font-size: larger;
+    color: #FFFFFF;
+}
+
+
+
+.Informacoes h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.Informacoes p{
+    margin: 0 auto;
+    text-align-last: center;
+    text-align: justify;
+    width: 90%;
     
 }
+
+.Informacoes #info_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+.Informacoes #info_grid  h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+
+
+
