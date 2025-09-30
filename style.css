@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root{
@@ -17,6 +18,9 @@ html{
     scroll-behavior: smooth;
 }
 
+
+/* Cabeçalho */
+
 header{
     height: 100px;
     width: 100%;
@@ -25,6 +29,11 @@ header{
     align-items: center;
     color: #FFFFFF;
     background-color: #040335;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    box-shadow: 2px 1px 15px #06067676;
 }
 
 header div{
@@ -33,6 +42,7 @@ header div{
 }
 
  header div h1{
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2.4em;
     text-shadow: 1px 1px 5px #000000;
 }
@@ -59,10 +69,16 @@ header nav > a:hover{
     border-radius: 8px; 
 }
 
+#Home{
+    margin-top: 100px;
+}
+
+/* Banner Principal */
 
 .Apresentacao{
     display: flex;
     justify-content: center;
+    height: 500px;
     max-width: 100%;
     box-shadow: 2px 2px 5px #00000097;
 }
@@ -84,6 +100,7 @@ header nav > a:hover{
 }
 
 #participantes > h2{
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 30px;
     font-size: 2.3em;
     background: linear-gradient(to right, var(--cor3), var(--cor4), var(--cor5));
@@ -110,6 +127,7 @@ header nav > a:hover{
 }
 
 #Data{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3.5em;
     font-weight: bold;
     background: linear-gradient(to left, var(--cor3), var(--cor4), var(--cor5));
@@ -118,8 +136,10 @@ header nav > a:hover{
 }
 
 #Mes{
+    font-family: 'Times New Roman', Times, serif;
     font-size: 3.8em;
     color: var(--cor3);
+    text-shadow: 1px 1px 2px var(--cor3);
 }
 
 #Local{
@@ -127,7 +147,7 @@ header nav > a:hover{
     color: #FFFFFF;
 }
 
-
+/* Sobre o evento */
 
 .Informacoes h2{
     text-align: center;
@@ -140,7 +160,13 @@ header nav > a:hover{
     margin: 0 auto;
     text-align-last: center;
     text-align: justify;
+    line-height: 25px;
     width: 90%;
+    margin-bottom: 30px;
+    background-color: #C99E4B;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #c99f4bc0;
     
 }
 
@@ -157,6 +183,229 @@ header nav > a:hover{
     font-size: 1.6em;
 }
 
+/* Programacao */
+
+#Programacao{
+    margin: 0;
+    background-color: #000000;
+    padding-bottom:60px;
+    box-shadow: 30px 3px 40px black;
+}
+
+#Programacao h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-size: 3em;
+    padding: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+.Carrossel{
+    box-shadow: 0px -5px 31px 5px #c99f4b5b;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+
+.Enquadramento{
+    width: 500%;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+
+.Enquadramento input{
+    display: none;
+}
+
+.imagem{
+    width: 20%;
+    position:relative;
+    transition: 2s;
+}
+
+.imagem img{
+    width: 800px;
+    max-height: 400px;
+}
+
+.ManualNavegacao{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.ManualBotao{
+    border: 2px solid #FFFFFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.ManualBotao:not(:last-child){
+    margin-right: 15px;
+}
+
+
+.ManualBotao:hover{
+    background-color: #FFFFFF;
+}
+
+#radio1:checked ~ .First{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .First{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .First{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .First{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .First{
+    margin-left: -80%;
+}
+
+
+.navegacao div{
+    border: 2px solid #0000FF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navegacao{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacao div:not(:last-child){
+    margin-right: 15px;
+}
+
+#radio1:checked ~ .navegacao .auto-btn1{
+    background-color: #FFFFFF;
+}
+#radio2:checked ~ .navegacao .auto-btn2{
+    background-color: #FFFFFF;
+}
+#radio3:checked ~ .navegacao .auto-btn3{
+    background-color: #FFFFFF;
+}
+#radio4:checked ~ .navegacao .auto-btn4{
+    background-color: #FFFFFF;
+}
+
+#radio5:checked ~ .navegacao .auto-btn5{
+    background-color: #FFFFFF;
+}
+
+
+/* Apoio */
+
+.Apoio{
+    height: 500px;
+    width: 100%;
+    background-color: var(--cor3);
+    box-shadow: 0px 0px  6px 10px #C99E4B;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.Apoio > h2{
+    color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+    text-decoration: dashed;
+    font-size: 3em;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Apoio .imagemApoio{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px; 
+    justify-items: center;
+
+}
+
+.imagemApoio div{
+    max-width: 250px;
+    height: 250px;
+}
+
+.imagemApoio >div p{
+    text-align: center;
+    width: 200px;
+    padding: 0px 15px 0px 15px;
+    font-size: 2em;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+.imagemApoio > div img{
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+.imagemApoio > div > p a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Roda Pé */
+
+footer{
+    background-color: #04052a;
+    color:#FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+footer h3{
+    padding: 30px;
+    font-size: 1.3em;
+}
+
+footer p{
+    line-height: 25px;
+}
+
+footer a > img{
+    background-color: #FFFFFF;
+    margin-top: 10px;
+
+}
+
+footer a:not(:last-child){
+    margin-right: 40px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 
 
